@@ -1,0 +1,11 @@
+version: "3"
+services:
+  tesla-history:
+    container_name: tesla-history
+    build: .
+    environment:
+      - TZ=US/Eastern
+      - PYTHONUNBUFFERED="True"
+    volumes:
+        - ./config.json:/config/config.json
+        - ./history:/history/
